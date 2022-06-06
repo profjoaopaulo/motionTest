@@ -1,0 +1,7 @@
+{
+  "name": "motionTest",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
