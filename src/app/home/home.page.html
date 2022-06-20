@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Aula Sensores de Movimento do Aparelho
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,29 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Aula Sensores de Movimento do Aparelho</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button full primary (click) = "startWatching()"> Iniciar </ion-button>
+    <ion-button full primary (click) = "capturarCoordenadas()"> Capturar </ion-button>
+    <ion-button full secondary (click) = "stopWatching()"> Parar </ion-button>
+
+    <ion-card *ngIf="data">
+
+      <ion-card-content>
+        <h2>Coordenadas:</h2>
+        <h2>X: {{data.x}}</h2>
+        <h2>Y: {{data.y}}</h2>
+        <h2>Z: {{data.z}}</h2>
+        <h2>Rotações:</h2>
+        <h2>Alpha: {{data.a}}</h2>
+        <h2>Beta: {{data.b}}</h2>
+        <h2>Gamma: {{data.g}}</h2>
+      </ion-card-content>
+
+    </ion-card>
+
   </div>
 </ion-content>

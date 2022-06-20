@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "motionTest",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
